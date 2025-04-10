@@ -15,9 +15,9 @@ const store = useStore();
 const items = ref(["100", "50", "10", "5"]);
 const selectedItem = ref(null);
 
-function filter(value) {
+const filter = (value) => {
   value= parseInt(value);
-  store.dispatch('filterTodo',value)
+  store.dispatch('todos/filterTodo',value)
 }
 </script>
 
