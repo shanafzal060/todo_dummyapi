@@ -10,6 +10,7 @@
               label="Add Todo"
               :rules="[rules.required, rules.counter ,rules.ifNum]"
               clearable
+              autofocus
             ></v-text-field>
             <v-btn :loading="loading" type="submit" color="green"
               >Add Todo
@@ -39,6 +40,7 @@ function onSubmit() {
 
   setTimeout(() => {
     loading.value = false;
+    title.value='';
   }, 1000);
 }
 
